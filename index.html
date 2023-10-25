@@ -27,8 +27,8 @@
   
   <link rel="stylesheet" media="screen and (max-width: 1319px)" href="css/mobile.css">
   <link rel="stylesheet" media="screen and (min-width: 1320px)" href="css/style.css">
-
-  <script src="js/data.json" id="data" type="application/json"></script>
+  
+  <script src="config.json" id="configData" type="application/json"></script>
 </head>
 
 <body>
@@ -40,29 +40,31 @@
       </div>
     </div>
 
-  <header class="header_section">
-    <div class="header_top">
-      <div class="container-fluid">
-        <div class="contact_link-container">
-          <a href="#" id="googleMapLink" class="contact_link1">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <span id="placeLabel"></span>
-          </a>
-          <a href="tel:{phone1}" class="contact_link2">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span id="phoneLabel1"></span>
-          </a>
-          <a href="tel:{phone2}" class="contact_link2">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span id="phoneLabel2"></span>
-          </a>
-          <a href="mailto:{email}" class="contact_link3">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <span id="emailLabel"></span>
-          </a>
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_link-container">
+            <a href="https://www.google.com/maps/place/Bergen/@60.3651855,5.4291706,96574m/data=!3m1!1e3!4m6!3m5!1s0x46390d4966767d77:0x9e42a03eb4de0a08!8m2!3d60.3912628!4d5.3220544!16zL20vMGZtN3M?entry=ttu" class="contact_link1">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Bergen/Norway
+              </span>
+            </a>
+            <a href="tel:+4746184335" class="contact_link2">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +47 46184335
+              </span>
+            </a>
+            <a href="mailto:info.skyclips@gmail.com" class="contact_link3">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                info.skyclips@gmail.com
+              </span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container">
@@ -528,21 +530,6 @@
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/script.js"></script>
-  
-  <script>
-    // Replace placeholders with data from config.json
-    const configData = document.getElementById("data").textContent;
-    const config = JSON.parse(configData);
-  
-    // Update the HTML elements with the data from the config
-    document.getElementById("googleMapLink").href = config.googleMapURL;
-    document.getElementById("placeLabel").textContent = config.place;
-    document.getElementById("phoneLabel1").textContent = config.phone1;
-    document.getElementById("phoneLabel2").textContent = config.phone2;
-    document.getElementById("emailLabel").textContent = config.email;
-  
-    // Update the title of the webpage
-    document.title = config.title;
-  </script>
 </body>
+
 </html>
